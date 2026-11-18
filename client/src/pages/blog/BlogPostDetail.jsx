@@ -16,7 +16,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 // Match your backend API URL base
-const API_BASE_URL = "https://project-tactyqal-backend.onrender.com/";
+const API_BASE_URL = "https://project-tactyqal-backend.onrender.com/api/blog";
 
 export default function BlogPostDetail() {
   const { slug } = useParams(); // Matches route like /blog/:slug

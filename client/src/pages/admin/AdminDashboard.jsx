@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 // Base URL points to http://localhost:5000/api/blog
-const API_BASE_URL = "https://project-tactyqal-backend.onrender.com/";
+const API_BASE_URL = "https://project-tactyqal-backend.onrender.com/api/blog";
 
 export default function AdminDashboard() {
   const [posts, setPosts] = useState([]);

@@ -14,7 +14,7 @@ import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
 
 // Match your backend API URL
-const API_BASE_URL = "https://project-tactyqal-backend.onrender.com/";
+const API_BASE_URL = "https://project-tactyqal-backend.onrender.com/api/blog";
 
 export default function BlogKnowledgeHub() {
   const [posts, setPosts] = useState([]);
