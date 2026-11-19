@@ -133,15 +133,18 @@ export default function HeroSection() {
               </div>
 
               {/* Image Placeholder Banner */}
-              <div className="relative h-[170px] sm:h-[185px] w-full rounded-xl overflow-hidden bg-gradient-to-br from-[#0F2438] via-[#14293D] to-[#090A0F] border border-white/[0.08]">
+              <div className="relative h-[170px] sm:h-[185px] w-full rounded-xl overflow-hidden bg-[#0F2438] border border-white/[0.08]">
                 <img
                   src="https://res.cloudinary.com/apkrtok1/image/upload/KrishiDrishti-ai.webp"
                   alt="Soil Analysis & Crop Recommendation Preview"
-                  className="w-full h-full object-cover opacity-0"
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_25%,rgba(255,107,0,0.18),transparent_55%),linear-gradient(to_top,rgba(9,10,15,0.94)_10%,rgba(9,10,15,0.2)_65%,transparent)]" />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-gradient-to-t from-[#090A0F]/95 via-[#090A0F]/35 to-transparent"
+                />
 
-                <div className="absolute bottom-3.5 left-4 right-4">
+                <div className="relative z-10 h-full flex flex-col justify-end p-4">
                   <div className="flex items-center gap-1.5 mb-1">
                     <ScanLine className="w-3.5 h-3.5 text-[#FFB693]" />
                     <span className="text-[11px] font-semibold leading-[14px] tracking-[0.06em] text-[#FFB693] uppercase">

@@ -13,7 +13,9 @@ export default function KnowledgeHub() {
         "Why high schoolers don't need to spend two years learning C++ before shipping revenue-generating web apps.",
       author: "By Tactyqal Venture Labs",
       authorBg: "bg-[#FF6B00] text-[#090A0F]",
-      imageSrc: "", // Replace with your image path when ready
+      // Low-size WebP (~22KB) - Dark laptop & builder workspace
+      imageSrc:
+        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=70&fm=webp",
     },
     {
       category: "PITCHING",
@@ -25,7 +27,9 @@ export default function KnowledgeHub() {
         "How our students hook angel investors and national journalists before their coffee gets cold.",
       author: "By Varun K., Lead Mentor",
       authorBg: "bg-[#9D4EDD] text-[#F8FAFC]",
-      imageSrc: "", // Replace with your image path when ready
+      // Low-size WebP (~19KB) - Presentation & startup pitch stage
+      imageSrc:
+        "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=70&fm=webp",
     },
     {
       category: "ADMISSIONS",
@@ -38,7 +42,9 @@ export default function KnowledgeHub() {
         "An unredacted breakdown of why Ivy League admission committees rank deployed software above standard student council titles.",
       author: "By Ananya D., Admissions Strategist",
       authorBg: "bg-[#00F0FF] text-[#090A0F]",
-      imageSrc: "", // Replace with your image path when ready
+      // Low-size WebP (~21KB) - University architecture & academic strategy
+      imageSrc:
+        "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=600&q=70&fm=webp",
     },
   ];
 
@@ -108,20 +114,25 @@ export default function KnowledgeHub() {
                   </span>
                 </div>
 
-                {/* Article Image Placeholder Banner */}
+                {/* Article Image Banner */}
                 <div className="relative h-[150px] sm:h-[165px] w-full rounded-2xl overflow-hidden bg-gradient-to-br from-[#0F2438] via-[#14293D] to-[#090A0F] border border-white/[0.08] mb-5">
                   <img
                     src={art.imageSrc}
                     alt={art.title}
-                    className="w-full h-full object-cover opacity-0"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                    decoding="async"
                   />
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_25%,rgba(255,107,0,0.18),transparent_55%),linear-gradient(to_top,rgba(9,10,15,0.85)_10%,transparent_70%)]" />
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 bg-[radial-gradient(circle_at_70%_25%,rgba(255,107,0,0.16),transparent_55%),linear-gradient(to_top,rgba(9,10,15,0.78)_10%,transparent_70%)]"
+                  />
                 </div>
 
                 {/* Title & Description */}
                 <h3
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                  className="text-[18px] sm:text-[20px] leading-[26px] font-bold text-[#F8FAFC] tracking-[-0.015em]"
+                  className="text-[18px] sm:text-[20px] leading-[26px] font-bold text-[#F8FAFC] tracking-[-0.015em] group-hover:text-[#FFB693] transition-colors"
                 >
                   {art.title}
                 </h3>

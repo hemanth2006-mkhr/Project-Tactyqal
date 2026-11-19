@@ -65,6 +65,10 @@ export default function BlogPostDetail() {
       .slice(0, 2);
   };
 
+  useEffect(() => {
+  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+}, [slug]);
+
   return (
     <div className="bg-[#090A0F] text-[#F8FAFC] min-h-screen">
       <Header />

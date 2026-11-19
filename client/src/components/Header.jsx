@@ -53,7 +53,7 @@ export default function Header() {
         <a
           href="/#home"
           onClick={(e) => handleNavClick(e, { sectionId: "home" })}
-          className="flex items-center gap-3 group"
+          className="flex items-center gap-2.5 sm:gap-3 group shrink-0"
         >
           <div
             className="w-9 h-9 rounded-[10px] flex items-center justify-center shadow-[0_0_20px_rgba(255,107,0,0.35)]"
@@ -65,7 +65,7 @@ export default function Header() {
           </div>
           <div
             style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-            className="tracking-wider font-extrabold text-[15px] sm:text-base flex items-center gap-1.5"
+            className="tracking-wider font-extrabold text-[14px] sm:text-base flex items-center gap-1.5"
           >
             <span className="text-[#F8FAFC]">TACTYQAL</span>
             <span className="text-[#FF6B00]">LABS</span>
@@ -79,19 +79,19 @@ export default function Header() {
               key={link.name}
               href={link.href}
               onClick={(e) => handleNavClick(e, link)}
-              className="text-[13px] font-medium text-[#94A3B8] hover:text-[#FF6B00] transition-colors cursor-pointer"
+              className="text-[13px] font-medium text-[#94A3B8] hover:text-[#FF6B00] transition-colors cursor-pointer whitespace-nowrap"
             >
               {link.name}
             </a>
           ))}
         </nav>
 
-        {/* Right CTA & Mobile Menu Toggle */}
-        <div className="flex items-center gap-3">
+        {/* Right Desktop CTA & Mobile Menu Toggle */}
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <a
             href="/#consultation"
             onClick={(e) => handleNavClick(e, { sectionId: "consultation" })}
-            className="bg-[#F8FAFC] hover:bg-white text-[#090A0F] text-[13px] font-semibold px-5 sm:px-6 py-2 rounded-full transition-all active:scale-95 hover:shadow-[0_0_20px_rgba(255,255,255,0.25)]"
+            className="hidden lg:inline-flex items-center justify-center bg-[#F8FAFC] hover:bg-white text-[#090A0F] text-[13px] font-semibold px-5 sm:px-6 py-2 rounded-full transition-all active:scale-95 hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] whitespace-nowrap"
           >
             Contact
           </a>
@@ -99,7 +99,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-[8px] text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/[0.05]"
+            className="lg:hidden p-2 rounded-[8px] text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/[0.05] cursor-pointer"
             aria-label="Toggle Menu"
           >
             {mobileMenuOpen ? (
@@ -113,7 +113,7 @@ export default function Header() {
 
       {/* Mobile Dropdown Nav */}
       {mobileMenuOpen && (
-        <nav className="lg:hidden max-w-[1440px] mx-auto mt-2 bg-[#12141D]/95 backdrop-blur-[20px] border border-white/[0.08] rounded-2xl p-4 flex flex-col gap-2.5 shadow-xl">
+        <nav className="lg:hidden max-w-[1440px] mx-auto mt-2 bg-[#12141D]/95 backdrop-blur-[20px] border border-white/[0.08] rounded-2xl p-4 flex flex-col gap-2 shadow-xl">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -124,6 +124,16 @@ export default function Header() {
               {link.name}
             </a>
           ))}
+
+          <div className="pt-2 mt-1 border-t border-white/[0.08]">
+            <a
+              href="/#consultation"
+              onClick={(e) => handleNavClick(e, { sectionId: "consultation" })}
+              className="w-full inline-flex items-center justify-center bg-[#F8FAFC] hover:bg-white text-[#090A0F] text-[13px] font-semibold px-5 py-2.5 rounded-full transition-all active:scale-95"
+            >
+              Contact
+            </a>
+          </div>
         </nav>
       )}
     </header>
